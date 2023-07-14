@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstapp/pages/pagina1.dart';
-import 'package:myfirstapp/pages/pagina2.dart';
 
 class Pagina3Page extends StatefulWidget {
   const Pagina3Page({Key? key}) : super(key: key);

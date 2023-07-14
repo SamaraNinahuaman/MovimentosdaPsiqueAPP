@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstapp/pages/pagina2.dart';
-import 'package:myfirstapp/pages/pagina3.dart';
 
 class Pagina1Page extends StatefulWidget {
   const Pagina1Page({Key? key}) : super(key: key);
@@ -12,7 +10,7 @@ class Pagina1Page extends StatefulWidget {
 class _Pagina1State extends State<Pagina1Page> {
   int posicaoArtigo = 0;
 
-  final PageController _pageController = PageController();
+  final PageController pageController = PageController();
 
   @override
   Widget build(BuildContext context) {

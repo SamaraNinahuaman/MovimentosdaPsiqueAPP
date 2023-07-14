@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:myfirstapp/pages/dados_cadastrais.dart';
-// import 'package:myfirstapp/pages/sala_atendimento.dart';
 import 'package:myfirstapp/tools/myroutes.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -102,11 +101,9 @@ class CustomDrawer extends StatelessWidget {
                     ],
                   )),
             ),
-            // onTap: () {
-            //   Navigator.pop(context);
-            //   Navigator.push(context,
-            //       MaterialPageRoute(builder: (context) => GoogleMeetScreen()));
-            // },
+            onTap: () {
+              Navigator.of(context).popAndPushNamed(kSALAATENDIMENTO);
+            },
           ),
           const SizedBox(
             height: 10,

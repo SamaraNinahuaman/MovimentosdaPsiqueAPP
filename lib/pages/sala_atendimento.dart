@@ -1,40 +1,45 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter/material.dart';
+import 'package:myfirstapp/tools/myroutes.dart';
 
-// class GoogleMeetScreen extends StatefulWidget {
-//   const GoogleMeetScreen({super.key});
+class SalaAtendimento extends StatefulWidget {
+  const SalaAtendimento({super.key});
 
-//   @override
-//   _GoogleMeetScreenState createState() => _GoogleMeetScreenState();
-// }
+  @override
+  State<SalaAtendimento> createState() => _SalaAtendimentoState();
+}
 
-// class _GoogleMeetScreenState extends State<GoogleMeetScreen> {
-//   late InAppWebViewController _webViewController;
+class _SalaAtendimentoState extends State<SalaAtendimento> {
+  var chaveAtendimentoController = TextEditingController();
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Google Meet'),
-//       ),
-//       body: Container(
-//         child: InAppWebView(
-//           initialData: InAppWebViewInitialData(
-//             data: '''
-//               <html>
-//                 <body>
-//                   <iframe src="https://meet.google.com" height="100%" width="100%"></iframe>
-//                 </body>
-//               </html>
-//             ''',
-//             mimeType: 'text/html',
-//             encoding: 'utf-8',
-//           ),
-//           onWebViewCreated: (controller) {
-//             _webViewController = controller;
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    const valor = AuthenticatorHelper.userAuthenticator;
+
+    return Scaffold(
+      appBar: AppBar(title: const Text("Sala de Atendimento")),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+        child: Column(
+          children: [
+            const Text(
+              "Insira a sua chave de entrada:",
+              style: TextStyle(fontSize: 20),
+            ),
+            TextField(
+              controller: chaveAtendimentoController,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  if (valor.containsValue(chaveAtendimentoController.text)) {
+                    print("Acesso Liberado!");
+                  } else {
+                    print("Acesso Negado");
+                  }
+                },
+                child: const Text("Enviar")),
+          ],
+        ),
+      ),
+    );
+  }
+}

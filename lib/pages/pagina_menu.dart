@@ -4,7 +4,7 @@ import 'package:myfirstapp/pages/pagina2.dart';
 import 'package:myfirstapp/pages/pagina3.dart';
 
 class MenuPage extends StatelessWidget {
-  MenuPage({super.key, this.selectIndex});
+  MenuPage({super.key, required this.selectIndex});
 
   int? selectIndex;
 
