@@ -28,15 +28,20 @@ class _SalaAtendimentoState extends State<SalaAtendimento> {
             TextField(
               controller: chaveAtendimentoController,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  if (valor.containsValue(chaveAtendimentoController.text)) {
-                    print("Acesso Liberado!");
-                  } else {
-                    print("Acesso Negado");
-                  }
-                },
-                child: const Text("Enviar")),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 100),
+              child: ElevatedButton(
+                  onPressed: () {
+                    FocusManager.instance.primaryFocus?.unfocus();
+
+                    if (valor.containsValue(chaveAtendimentoController.text)) {
+                      print("Acesso Liberado!");
+                    } else {
+                      print("Acesso Negado");
+                    }
+                  },
+                  child: const Text("Enviar")),
+            ),
           ],
         ),
       ),

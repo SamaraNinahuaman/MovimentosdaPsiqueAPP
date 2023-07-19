@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myfirstapp/pages/blog_main.dart';
+import 'package:myfirstapp/pages/configuracoes_page.dart';
 import 'package:myfirstapp/pages/login_page.dart';
 import 'package:myfirstapp/pages/main_page.dart';
 import 'package:myfirstapp/pages/pagina1.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         kPAGINA2: (context) => const Pagina2Page(),
         kPAGINA1: (context) => const Pagina1Page(),
         kPAGINA3: (context) => const Pagina3Page(),
+        kCONFIGURACOES: (context) => const ConfiguracoesPage(),
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.indigo),
