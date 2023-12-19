@@ -1,16 +1,6 @@
-# myfirstapp
+Movimentos da Psiquê
+App de atendimento online em psicoterapia.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este App esta em desenvolvimento para ser um auxiliar no processo de atendimento online em psicoterapia.
+É um dos meus primeiros app mobile em desenvolvimento na linguagem Flutter.
+Sua versão web está em Angular.
